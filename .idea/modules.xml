@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/MultiThreadProj.iml" filepath="$PROJECT_DIR$/.idea/MultiThreadProj.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/MultiThreading.iml" filepath="$PROJECT_DIR$/.idea/MultiThreading.iml" />
     </modules>
   </component>

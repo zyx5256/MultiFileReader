@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeReloadState">
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="MultiThreadProj" targetName="MultiThreadProj" />
       <config projectName="MultiThreadProj" targetName="gmock" />
-      <config projectName="MultiThreadProj" targetName="TestRunner" />
+      <config projectName="MultiThreadProj" targetName="MultiThreadProj" />
       <config projectName="MultiThreadProj" targetName="gmock_main" />
+      <config projectName="MultiThreadProj" targetName="TestRunner" />
       <config projectName="MultiThreadProj" targetName="gtest_main" />
       <config projectName="MultiThreadProj" targetName="gtest" />
       <config projectName="MultiThreadProj" targetName="TsvFileHandler" />
@@ -24,14 +27,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5944ac07-e4be-4cae-b47f-8888e01618c4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ut/testData/test.tsv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ut/tsvFileHandlerTest/TsvFileHandlerTest.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/MultiThreadProj.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/TsvFileHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TsvFileHandler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TsvFileHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TsvFileHandler.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ut/TsvFileHandlerTest.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ut/tsvFileHandlerTest/TsvFileHandlerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ut/tsvFileHandlerTest/TsvFileHandlerTest.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,13 +93,14 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "cf.advertisement.text.has.clang-format": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "last_opened_file_path": "/Users/zyx/GitHub/MultiThreading/ut/testData",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C/C++"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.make"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -103,6 +108,7 @@
       <recent name="$PROJECT_DIR$/ut/testData" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ZYX\CLionProjects\MultiThreadProj\lib" />
       <recent name="$PROJECT_DIR$/ut/tsvFileHandlerTest" />
     </key>
   </component>
@@ -110,12 +116,6 @@
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestRunner" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner" TEST_MODE="SUITE_TEST">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-        <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="TestSample.goTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="MultiThreadProjTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="MultiThreadProjTest" TEST_CLASS="TestSample" TEST_METHOD="goTest" TEST_MODE="SUITE_TEST">
@@ -130,7 +130,7 @@
         <option name="BeforeTestRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TsvFileHandler_Test.readline_1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner" TEST_CLASS="TsvFileHandler_Test" TEST_METHOD="readline_1" TEST_MODE="SUITE_TEST">
+    <configuration name="TsvFileHandler_Test.readline_1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner" TEST_CLASS="TsvFileHandler_Test" TEST_METHOD="readline_1" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -147,7 +147,7 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestRunner" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner">
+    <configuration name="TestRunner" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -185,7 +185,6 @@
       <item itemvalue="CMake Application.gtest" />
       <item itemvalue="CMake Application.gtest_main" />
       <item itemvalue="CMake Application.TestRunner" />
-      <item itemvalue="Google Test.TestRunner" />
       <item itemvalue="Google Test.TsvFileHandler_Test.readline_1" />
       <item itemvalue="Google Test.TsvFileHandler_Test.goTest" />
       <item itemvalue="Google Test.TestSample.goTest" />
@@ -215,5 +214,16 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -50,10 +50,10 @@ std::string TsvFileHandlerImpl::ReadLine() {
     }
 
     std::string line;
-    if (!getline(file_, line, '\n')) {
+    if (!getline(file_, line)) {
         throw std::out_of_range("no more lines to read");
     }
-    return line;
+    return line.erase(line.find_last_not_of(" \n\r\t")+1);
 }
 
 bool TsvFileHandlerImpl::WriteLine(const std::string &line) {
