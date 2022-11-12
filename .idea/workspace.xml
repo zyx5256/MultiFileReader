@@ -9,7 +9,11 @@
   <component name="CMakeRunConfigurationManager">
     <generated>
       <config projectName="MultiThreadProj" targetName="MultiThreadProj" />
-      <config projectName="MultiThreadProj" targetName="MultiThreadProjTest" />
+      <config projectName="MultiThreadProj" targetName="gmock" />
+      <config projectName="MultiThreadProj" targetName="TestRunner" />
+      <config projectName="MultiThreadProj" targetName="gmock_main" />
+      <config projectName="MultiThreadProj" targetName="gtest_main" />
+      <config projectName="MultiThreadProj" targetName="gtest" />
       <config projectName="MultiThreadProj" targetName="TsvFileHandler" />
     </generated>
   </component>
@@ -20,8 +24,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5944ac07-e4be-4cae-b47f-8888e01618c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ut/testData/test.tsv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ut/tsvFileHandlerTest/TsvFileHandlerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ut/TsvFileHandlerTest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/ut/TsvFileHandlerTest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TsvFileHandler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/TsvFileHandler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TsvFileHandler.h" beforeDir="false" afterPath="$PROJECT_DIR$/src/TsvFileHandler.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ut/TsvFileHandlerTest.cpp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,18 +90,53 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
+    "last_opened_file_path": "/Users/zyx/GitHub/MultiThreading/ut/testData",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.C/C++"
   }
 }]]></component>
-  <component name="RunManager" selected="CMake Application.MultiThreadProj">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ut/testData" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ut/tsvFileHandlerTest" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Google Test.TsvFileHandler_Test.readline_1">
     <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultiThreadProjTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="MultiThreadProjTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="MultiThreadProjTest" TEST_MODE="SUITE_TEST">
+    <configuration name="TestRunner" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSample.goTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="MultiThreadProjTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="MultiThreadProjTest" TEST_CLASS="TestSample" TEST_METHOD="goTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TsvFileHandler_Test.goTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="MultiThreadProjTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="MultiThreadProjTest" TEST_CLASS="TsvFileHandler_Test" TEST_METHOD="goTest" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TsvFileHandler_Test.readline_1" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner" TEST_CLASS="TsvFileHandler_Test" TEST_METHOD="readline_1" TEST_MODE="SUITE_TEST">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="BeforeTestRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TsvFileHandler.goTest" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="MultiThreadProjTest" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="MultiThreadProjTest" TEST_CLASS="TsvFileHandler" TEST_METHOD="goTest" TEST_MODE="SUITE_TEST">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
         <option name="BeforeTestRunTask" enabled="true" />
@@ -102,7 +147,32 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRunner" type="CMakeRunConfiguration" factoryName="Application" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TestRunner" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="MultiThreadProj" RUN_TARGET_NAME="TestRunner">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TsvFileHandler" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="TsvFileHandler" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="gmock" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="gmock_main" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="gtest" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="MultiThreadProj" TARGET_NAME="gtest_main" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -110,8 +180,26 @@
     <list>
       <item itemvalue="CMake Application.MultiThreadProj" />
       <item itemvalue="CMake Application.TsvFileHandler" />
-      <item itemvalue="Google Test.MultiThreadProjTest" />
+      <item itemvalue="CMake Application.gmock" />
+      <item itemvalue="CMake Application.gmock_main" />
+      <item itemvalue="CMake Application.gtest" />
+      <item itemvalue="CMake Application.gtest_main" />
+      <item itemvalue="CMake Application.TestRunner" />
+      <item itemvalue="Google Test.TestRunner" />
+      <item itemvalue="Google Test.TsvFileHandler_Test.readline_1" />
+      <item itemvalue="Google Test.TsvFileHandler_Test.goTest" />
+      <item itemvalue="Google Test.TestSample.goTest" />
+      <item itemvalue="Google Test.TsvFileHandler.goTest" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Google Test.TsvFileHandler_Test.readline_1" />
+        <item itemvalue="CMake Application.TestRunner" />
+        <item itemvalue="Google Test.TsvFileHandler_Test.goTest" />
+        <item itemvalue="Google Test.TsvFileHandler.goTest" />
+        <item itemvalue="Google Test.TestSample.goTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,7 +209,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1668250505350</updated>
-      <workItem from="1668250509025" duration="1178000" />
+      <workItem from="1668250509025" duration="6260000" />
     </task>
     <servers />
   </component>

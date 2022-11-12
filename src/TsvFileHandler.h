@@ -1,5 +1,5 @@
-#ifndef MULTITHREADPROJ_TSVFILEHANDLER_H
-#define MULTITHREADPROJ_TSVFILEHANDLER_H
+#ifndef MULTI_THREAD_PROJ_TSV_FILE_HANDLER_H
+#define MULTI_THREAD_PROJ_TSV_FILE_HANDLER_H
 
 
 #include <string>
@@ -8,7 +8,7 @@
 
 class TsvFileHandler {
 public:
-    virtual ~TsvFileHandler() = 0;
+    virtual ~TsvFileHandler() = default;
     virtual std::vector<std::string> ReadLines() = 0;
     virtual std::string ReadLine() = 0;
     virtual bool WriteLine(const std::string& line) = 0;
@@ -17,4 +17,4 @@ public:
 
 std::unique_ptr<TsvFileHandler> CreateTsvFileHandler(const std::string& line);
 
-#endif //MULTITHREADPROJ_TSVFILEHANDLER_H
+#endif //MULTI_THREAD_PROJ_TSV_FILE_HANDLER_H

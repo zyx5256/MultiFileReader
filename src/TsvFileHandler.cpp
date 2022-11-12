@@ -6,7 +6,7 @@ class TsvFileHandlerImpl : public TsvFileHandler {
 public:
     explicit TsvFileHandlerImpl(const std::string &line);
 
-    ~TsvFileHandlerImpl() override = default;
+    ~TsvFileHandlerImpl() override;
 
     std::vector<std::string> ReadLines() override;
 
@@ -20,6 +20,13 @@ private:
     std::string filePath_;
     std::fstream file_;
 };
+
+TsvFileHandlerImpl::~TsvFileHandlerImpl()
+{
+    if (file_.is_open()) {
+        file_.close();
+    }
+}
 
 TsvFileHandlerImpl::TsvFileHandlerImpl(const std::string &line) {
     filePath_ = line;
@@ -43,7 +50,7 @@ std::string TsvFileHandlerImpl::ReadLine() {
     }
 
     std::string line;
-    if (!getline(file_, line)) {
+    if (!getline(file_, line, '\n')) {
         throw std::out_of_range("no more lines to read");
     }
     return line;
