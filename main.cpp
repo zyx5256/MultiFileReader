@@ -1,6 +1,6 @@
 #include "src/utils/utils.h"
 
 int main() {
-    utils::CheckOS();
+    utils::checkOS();
     return 0;
 }

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "utils.h"
 
-int utils::CheckOS()
+int utils::checkOS()
 {
     {
         int no_os_flag=1;

@@ -8,13 +8,13 @@ public:
 
     ~TsvFileHandlerImpl() override;
 
-    std::vector<std::string> ReadLines() override;
+    std::vector<std::string> readLines() override;
 
-    std::string ReadLine() override;
+    std::string readLine() override;
 
-    bool WriteLine(const std::string &line) override;
+    bool writeLine(const std::string &line) override;
 
-    bool WriteLines(const std::vector<std::string> &lines) override;
+    bool writeLines(const std::vector<std::string> &lines) override;
 
 private:
     std::string filePath_;
@@ -32,7 +32,7 @@ TsvFileHandlerImpl::TsvFileHandlerImpl(const std::string &line) {
     filePath_ = line;
 }
 
-std::vector<std::string> TsvFileHandlerImpl::ReadLines() {
+std::vector<std::string> TsvFileHandlerImpl::readLines() {
     std::vector<std::string> lines;
     std::string line;
     std::fstream file;
@@ -45,7 +45,7 @@ std::vector<std::string> TsvFileHandlerImpl::ReadLines() {
     return lines;
 }
 
-std::string TsvFileHandlerImpl::ReadLine() {
+std::string TsvFileHandlerImpl::readLine() {
     if (!file_.is_open()) {
         file_.open(filePath_);
     }
@@ -58,16 +58,16 @@ std::string TsvFileHandlerImpl::ReadLine() {
     return line.erase(line.find_last_not_of(" \n\r\t") + 1);
 }
 
-bool TsvFileHandlerImpl::WriteLine(const std::string &line) {
+bool TsvFileHandlerImpl::writeLine(const std::string &line) {
     std::cout << "Not Implemented yet." << std::endl;
     return false;
 }
 
-bool TsvFileHandlerImpl::WriteLines(const std::vector<std::string> &lines) {
+bool TsvFileHandlerImpl::writeLines(const std::vector<std::string> &lines) {
     std::cout << "Not Implemented yet." << std::endl;
     return false;
 }
 
-std::unique_ptr<TsvFileHandler> CreateTsvFileHandler(const std::string &line) {
+std::unique_ptr<TsvFileHandler> createTsvFileHandler(const std::string &line) {
     return std::make_unique<TsvFileHandlerImpl>(line);
 }

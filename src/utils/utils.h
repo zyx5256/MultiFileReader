@@ -1,11 +1,11 @@
-#ifndef MULTI_THREAD_PROJ_UTILS_H
-#define MULTI_THREAD_PROJ_UTILS_H
+#ifndef MULTITHREADPROJ_UTILS_H
+#define MULTITHREADPROJ_UTILS_H
 
 
 class utils {
 public:
-    static int CheckOS();
+    static int checkOS();
 };
 
 
-#endif //MULTI_THREAD_PROJ_UTILS_H
+#endif //MULTITHREADPROJ_UTILS_H
