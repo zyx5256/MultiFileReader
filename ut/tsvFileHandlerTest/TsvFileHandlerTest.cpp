@@ -1,12 +1,7 @@
-#include "../../src/TsvFileHandler.h"
+#include "../../src/fileHandler/TsvFileHandler.h"
 #include "gtest/gtest.h"
 
-
-#ifdef __APPLE__
-    const std::string TEST_DATA_FILE_PATH = "../ut/testData/test.tsv";
-#else
-    const std::string TEST_DATA_FILE_PATH = "..\\ut\\testData\\test.tsv";
-#endif
+const std::string TEST_DATA_FILE_PATH = "../ut/testData/test.tsv";
 
 // test read line
 TEST(TsvFileHandler_Test, readline_1)

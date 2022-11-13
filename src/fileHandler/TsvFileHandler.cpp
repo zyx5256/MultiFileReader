@@ -38,6 +38,7 @@ std::vector<std::string> TsvFileHandlerImpl::ReadLines() {
     std::fstream file;
     file.open(filePath_);
     while (getline(file, line)) {
+        line.erase(line.find_last_not_of(" \n\r\t") + 1);
         lines.emplace_back(line);
     }
     file.close();
@@ -54,7 +55,7 @@ std::string TsvFileHandlerImpl::ReadLine() {
         file_.close();
         throw std::out_of_range("no more lines to read");
     }
-    return line.erase(line.find_last_not_of(" \n\r\t")+1);
+    return line.erase(line.find_last_not_of(" \n\r\t") + 1);
 }
 
 bool TsvFileHandlerImpl::WriteLine(const std::string &line) {
