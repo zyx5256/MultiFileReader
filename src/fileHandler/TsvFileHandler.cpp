@@ -16,6 +16,8 @@ public:
 
     bool writeLines(const std::vector<std::string>& lines) override;
 
+    bool hasNext() override;
+
 private:
     std::string filePath_;
     std::fstream file_;
@@ -71,6 +73,11 @@ bool TsvFileHandlerImpl::writeLines(const std::vector<std::string>& lines)
 {
     std::cout << "Not Implemented yet." << std::endl;
     return false;
+}
+
+bool TsvFileHandlerImpl::hasNext()
+{
+    return file_.peek() != EOF;
 }
 
 std::unique_ptr<TsvFileHandler> createTsvFileHandler(const std::string& line)

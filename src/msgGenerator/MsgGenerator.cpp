@@ -1,7 +1,10 @@
 #include "MsgGenerator.h"
 #include "../../src/fileHandler/TsvFileHandler.h"
+#include "../../src/utils/logger.h"
 #include <algorithm>
 #include <mutex>
+#include <thread>
+#include <sstream>
 
 class MsgGeneratorImpl : public MsgGenerator {
 public:
@@ -9,12 +12,10 @@ public:
 
     ~MsgGeneratorImpl() override = default;
 
-    void genMsg(std::queue<std::string>& container) const override;
-
-    void stopGen() override;
+    void genMsg(std::queue<std::string>& container) override;
 
 private:
-    void genMsgTask(std::queue<std::string>& container, const std::string& fileSource) const;
+    void genMsgTask(std::queue<std::string>& container, const std::string& fileSource);
 
 private:
     std::vector<std::string> fileSources_;
@@ -26,19 +27,37 @@ MsgGeneratorImpl::MsgGeneratorImpl(const std::vector<std::string>& fileSources)
     fileSources_ = fileSources;
 }
 
-void MsgGeneratorImpl::genMsg(std::queue<std::string>& container) const
+void MsgGeneratorImpl::genMsg(std::queue<std::string>& container)
 {
-//    std::vector<std::thread> threads;
+    std::vector<std::thread> threads;
+    for (const std::string& fileSource : fileSources_) {
+        std::thread td([&](){genMsgTask(container, fileSource);});
+        threads.emplace_back(std::move(td));
+    }
+
+    for (std::thread& td : threads) {
+        td.join();
+    }
 }
 
-void MsgGeneratorImpl::stopGen()
+void MsgGeneratorImpl::genMsgTask(std::queue<std::string>& container, const std::string& fileSource)
 {
+    std::stringstream ss;
+    ss << "Thread " << std::this_thread::get_id() << " start running";
 
-}
+    Logger::info(ss.str());
+    auto tsvFileHandlerPtr = createTsvFileHandler(fileSource);
+    std::unique_lock<std::mutex> guard(mutex_, std::defer_lock);
+    while (tsvFileHandlerPtr->hasNext()) {
+        std::string line = tsvFileHandlerPtr->readLine();
+        guard.lock();
+        container.push(line);
+        guard.unlock();
+    }
 
-void MsgGeneratorImpl::genMsgTask(std::queue<std::string>& container, const std::string& fileSource) const
-{
-
+    std::stringstream ss1;
+    ss1 << "Thread " << std::this_thread::get_id() << " start running";
+    Logger::info(ss1.str());
 }
 
 std::unique_ptr<MsgGenerator> createMsgGenerator(const std::vector<std::string>& fileSources)

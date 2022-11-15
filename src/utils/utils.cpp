@@ -1,6 +1,8 @@
 #include <iostream>
 #include "utils.h"
 
+using namespace std;
+
 int utils::checkOS()
 {
     {

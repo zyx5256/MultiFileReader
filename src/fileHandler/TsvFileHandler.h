@@ -17,6 +17,8 @@ public:
     virtual bool writeLine(const std::string& line) = 0;
 
     virtual bool writeLines(const std::vector<std::string>& lines) = 0;
+
+    virtual bool hasNext() = 0;
 };
 
 std::unique_ptr<TsvFileHandler> createTsvFileHandler(const std::string& line);
