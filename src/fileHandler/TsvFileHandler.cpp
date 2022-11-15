@@ -4,7 +4,7 @@
 
 class TsvFileHandlerImpl : public TsvFileHandler {
 public:
-    explicit TsvFileHandlerImpl(const std::string &line);
+    explicit TsvFileHandlerImpl(const std::string& line);
 
     ~TsvFileHandlerImpl() override;
 
@@ -12,9 +12,9 @@ public:
 
     std::string readLine() override;
 
-    bool writeLine(const std::string &line) override;
+    bool writeLine(const std::string& line) override;
 
-    bool writeLines(const std::vector<std::string> &lines) override;
+    bool writeLines(const std::vector<std::string>& lines) override;
 
 private:
     std::string filePath_;
@@ -28,11 +28,13 @@ TsvFileHandlerImpl::~TsvFileHandlerImpl()
     }
 }
 
-TsvFileHandlerImpl::TsvFileHandlerImpl(const std::string &line) {
+TsvFileHandlerImpl::TsvFileHandlerImpl(const std::string& line)
+{
     filePath_ = line;
 }
 
-std::vector<std::string> TsvFileHandlerImpl::readLines() {
+std::vector<std::string> TsvFileHandlerImpl::readLines()
+{
     std::vector<std::string> lines;
     std::string line;
     std::fstream file;
@@ -45,7 +47,8 @@ std::vector<std::string> TsvFileHandlerImpl::readLines() {
     return lines;
 }
 
-std::string TsvFileHandlerImpl::readLine() {
+std::string TsvFileHandlerImpl::readLine()
+{
     if (!file_.is_open()) {
         file_.open(filePath_);
     }
@@ -58,16 +61,19 @@ std::string TsvFileHandlerImpl::readLine() {
     return line.erase(line.find_last_not_of(" \n\r\t") + 1);
 }
 
-bool TsvFileHandlerImpl::writeLine(const std::string &line) {
+bool TsvFileHandlerImpl::writeLine(const std::string& line)
+{
     std::cout << "Not Implemented yet." << std::endl;
     return false;
 }
 
-bool TsvFileHandlerImpl::writeLines(const std::vector<std::string> &lines) {
+bool TsvFileHandlerImpl::writeLines(const std::vector<std::string>& lines)
+{
     std::cout << "Not Implemented yet." << std::endl;
     return false;
 }
 
-std::unique_ptr<TsvFileHandler> createTsvFileHandler(const std::string &line) {
+std::unique_ptr<TsvFileHandler> createTsvFileHandler(const std::string& line)
+{
     return std::make_unique<TsvFileHandlerImpl>(line);
 }
