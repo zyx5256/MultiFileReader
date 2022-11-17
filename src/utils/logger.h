@@ -15,9 +15,7 @@ extern Level LOG_LEVEL;
 class Logger {
 public:
     Logger() = delete;
-    static void info(const std::string& content);
-    static void warning(const std::string& content);
-    static void error(const std::string& content);
+    static void print(const std::stringstream& content);
 
 private:
     static std::mutex mutex_;

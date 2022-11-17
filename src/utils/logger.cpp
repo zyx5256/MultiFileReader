@@ -1,26 +1,18 @@
 #include "logger.h"
-#include <iostream>
+#include <sstream>
+#include <unordered_map>
 
-void Logger::info(const std::string& content)
-{
-    std::lock_guard<std::mutex> guard(mutex_);
-    std::cout << "[INFO]" << content << std::endl;
+namespace {
+std::unordered_map<Level, std::string> LOG_NAME_MAP {
+    {INFO, "[INFO]"},
+    {WARNING, "[WARNING]"},
+    {ERROR, "[ERROR]"},
+};
 }
 
-void Logger::warning(const std::string& content)
+void Logger::print(const std::stringstream& content)
 {
-    if (LOG_LEVEL == INFO) {
-        return;
-    }
-    std::lock_guard<std::mutex> guard(mutex_);
-    std::cout << "[WARNING]" << content << std::endl;
+    printf("%s%s\n", &LOG_NAME_MAP[LOG_LEVEL][0], &content.str()[0]);
 }
 
-void Logger::error(const std::string& content)
-{
-    if (LOG_LEVEL == INFO || LOG_LEVEL == WARNING) {
-        return;
-    }
-    std::lock_guard<std::mutex> guard(mutex_);
-    std::cout << "[ERROR]" << content << std::endl;
-}
+
