@@ -1,6 +1,6 @@
 #include "MsgGenerator.h"
 #include "../../src/fileHandler/TsvFileHandler.h"
-#include "../../src/utils/logger.h"
+#include "../../src/utils/Log.h"
 #include <algorithm>
 #include <mutex>
 #include <thread>
@@ -45,7 +45,7 @@ void MsgGeneratorImpl::genMsgTask(std::queue<std::string>& container, const std:
     std::stringstream ss;
     ss << "Thread " << std::this_thread::get_id() << " start running";
 
-    Logger::info(ss.str());
+    LOG::INFO(ss.str());
     auto tsvFileHandlerPtr = createTsvFileHandler(fileSource);
     std::unique_lock<std::mutex> guard(mutex_, std::defer_lock);
     while (tsvFileHandlerPtr->hasNext()) {
@@ -57,7 +57,7 @@ void MsgGeneratorImpl::genMsgTask(std::queue<std::string>& container, const std:
 
     std::stringstream ss1;
     ss1 << "Thread " << std::this_thread::get_id() << " start running";
-    Logger::info(ss1.str());
+    LOG::INFO(ss1.str());
 }
 
 std::unique_ptr<MsgGenerator> createMsgGenerator(const std::vector<std::string>& fileSources)

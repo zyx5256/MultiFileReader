@@ -1,14 +1,14 @@
-#include "../../src/fileHandler/TsvFileHandler.h"
+#include "../src/fileHandler/TsvFileHandler.h"
 #include "gtest/gtest.h"
 
-const std::string TEST_DATA_FILE_PATH = "../ut/testData/test.tsv";
+const std::string TEST_DATA_FILE_PATH = "../ut/data/test.tsv";
 
 // test read line
 TEST(TsvFileHandler_Test, readline_1)
 {
     auto tsvFileHandler = createTsvFileHandler(TEST_DATA_FILE_PATH);
     std::string line = tsvFileHandler->readLine();
-    ASSERT_STREQ(static_cast<char *>(&line[0]), "id,sentence");
+    EXPECT_STREQ(static_cast<char *>(&line[0]), "id,sentence");
 }
 
 // test read last line
@@ -19,7 +19,7 @@ TEST(TsvFileHandler_Test, readline_2)
     for (int i = 0; i < 4; ++i) {
         line = tsvFileHandler->readLine();
     }
-    ASSERT_STREQ(static_cast<char *>(&line[0]), "2,Why don't people simply 'Google' instead;");
+    EXPECT_STREQ(static_cast<char *>(&line[0]), "2,Why don't people simply 'Google' instead;");
 }
 
 // test exception
@@ -33,7 +33,7 @@ TEST(TsvFileHandler_Test, readline_3)
     }
     catch( const std::out_of_range& err ) {
         // check exception
-        ASSERT_STREQ(err.what(), "no more lines to read");
+        EXPECT_STREQ(err.what(), "no more lines to read");
     }
 }
 
@@ -47,7 +47,7 @@ TEST(TsvFileHandler_Test, readline_4)
                                        "1,What are the top ten Consumer-to-Consumer,",
                                        "2,Why don't people simply 'Google' instead;"};
     for (int i = 0; i < 4; ++i) {
-        ASSERT_STREQ(static_cast<char *>(&lines[i][0]), static_cast<char *>(&target[i][0]));
+        EXPECT_STREQ(static_cast<char *>(&lines[i][0]), static_cast<char *>(&target[i][0]));
     }
 }
 

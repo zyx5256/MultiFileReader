@@ -1,9 +1,9 @@
 #include <iostream>
-#include "utils.h"
+#include "CommonUtils.h"
 
 using namespace std;
 
-int utils::checkOS()
+int CommonUtils::checkOS()
 {
     {
         int no_os_flag=1;
