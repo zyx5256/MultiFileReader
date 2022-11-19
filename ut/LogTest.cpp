@@ -3,31 +3,32 @@
 
 Level LOG_LEVEL;
 
+void logAllLevels()
+{
+    LOG::INFO("test info");
+    LOG::WARNING("test warning");
+    LOG::ERROR("test error");
+}
+
 // test info level
 TEST(Log_test, info)
 {
     LOG_LEVEL = Level::INFO;
-    LOG::INFO("test info");
-    LOG::WARNING("test warning");
-    LOG::ERROR("test error");
+    logAllLevels();
 }
 
 // test warning level
 TEST(Log_test, warning)
 {
     LOG_LEVEL = Level::WARNING;
-    LOG::INFO("test info");
-    LOG::WARNING("test warning");
-    LOG::ERROR("test error");
+    logAllLevels();
 }
 
 // test error level
 TEST(Log_test, error)
 {
     LOG_LEVEL = Level::ERROR;
-    LOG::INFO("test info");
-    LOG::WARNING("test warning");
-    LOG::ERROR("test error");
+    logAllLevels();
 }
 
 int main()

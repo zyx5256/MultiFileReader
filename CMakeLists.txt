@@ -15,5 +15,5 @@ target_link_libraries(MultiThreadProj TsvFileHandler Utils MsgGenerator)
 add_executable(TestFileHandler ut/FileHandlerTest.cpp)
 target_link_libraries(TestFileHandler TsvFileHandler gtest_main)
 
-add_executable(TestFileLog ut/LogTest.cpp)
-target_link_libraries(TestFileLog Utils gtest_main)
+add_executable(TestLog ut/LogTest.cpp)
+target_link_libraries(TestLog Utils gtest_main)
