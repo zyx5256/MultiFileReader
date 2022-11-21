@@ -8,7 +8,7 @@ TEST(TsvFileHandler_Test, readline_1)
 {
     auto tsvFileHandler = createTsvFileHandler(TEST_DATA_FILE_PATH);
     std::string line = tsvFileHandler->readLine();
-    EXPECT_STREQ(static_cast<char *>(&line[0]), "id,sentence");
+    EXPECT_STREQ(&line[0], "id,sentence");
 }
 
 // test read last line
@@ -19,7 +19,7 @@ TEST(TsvFileHandler_Test, readline_2)
     for (int i = 0; i < 4; ++i) {
         line = tsvFileHandler->readLine();
     }
-    EXPECT_STREQ(static_cast<char *>(&line[0]), "2,Why don't people simply 'Google' instead;");
+    EXPECT_STREQ(&line[0], "2,Why don't people simply 'Google' instead;");
 }
 
 // test exception
@@ -47,7 +47,7 @@ TEST(TsvFileHandler_Test, readline_4)
                                        "1,What are the top ten Consumer-to-Consumer,",
                                        "2,Why don't people simply 'Google' instead;"};
     for (int i = 0; i < 4; ++i) {
-        EXPECT_STREQ(static_cast<char *>(&lines[i][0]), static_cast<char *>(&target[i][0]));
+        EXPECT_STREQ(&lines[i][0], &target[i][0]);
     }
 }
 
